@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9C279A82-2579-4FD9-A621-E8272EF6CC6C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PickACard</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CDBC86AF7AB4AE9F5C823A53ED1E0257C94B11E7</key>
+		<string>ssh://github.com/kerrjo/PickACard.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PickACard.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CDBC86AF7AB4AE9F5C823A53ED1E0257C94B11E7</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/kerrjo/PickACard.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CDBC86AF7AB4AE9F5C823A53ED1E0257C94B11E7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CDBC86AF7AB4AE9F5C823A53ED1E0257C94B11E7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PickACard</string>
+		</dict>
+	</array>
+</dict>
+</plist>
