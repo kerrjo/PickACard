@@ -14,7 +14,7 @@ class ExperimentViewController: UIViewController {
     //    let cardframe = CGRectMake (0,0,754,1052)
     //    let cardframe = CGRectMake (0,0,370,600)
     var cardframe:CGRect?
-    
+    //joker
     
     //    cardframe = CGRectMake (0,0,754,1052)
     
