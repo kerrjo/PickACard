@@ -73,7 +73,10 @@ class SimpleRevealViewController: UIViewController {
             
             let halfSize = backOfCardView!.frame.size.width
             var bounds:CGRect = self.backOfCardView!.bounds
-            bounds.offset(dx: halfSize, dy: 0)
+
+            bounds.offsetInPlace(dx: halfSize, dy: 0)
+
+//            bounds.offset(dx: halfSize, dy: 0)
             backOfCardView!.bounds = bounds
             
             self.backOfCardView!.addSubview(backCardView)
@@ -162,8 +165,11 @@ class SimpleRevealViewController: UIViewController {
         let moveShrinkSpinTransform = CATransform3DConcat(moveShrinkTransform,rotateTransform)
         let shrinkSpinTransform = CATransform3DConcat(scaleTransform,rotateTransform)
         
-        UIView.transitionWithView(self.view, duration: 1.12, options:
-            UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat | UIViewAnimationOptions.TransitionFlipFromLeft ,
+        UIView.transitionWithView(self.view, duration: 1.12,
+            options: [.Autoreverse, .Repeat, .TransitionFlipFromLeft],
+            
+//            options:
+//            UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat | UIViewAnimationOptions.TransitionFlipFromLeft ,
             
             animations: {
                 self.frontOfCardView!.hidden = false

@@ -114,8 +114,10 @@ class ExperimentViewController: UIViewController {
             
             
             //            bounds.offset(dx: halfSize, dy: 0)
-            bounds.offset(dx: halfSize, dy: 0)
-            
+//            bounds.offset(dx: halfSize, dy: 0)
+
+            bounds.offsetInPlace(dx: halfSize, dy: 0)
+
             //backOfCardView.bounds = bounds
             
         }
@@ -148,9 +150,12 @@ class ExperimentViewController: UIViewController {
     
     func flipCardToFront () {
         
-        UIView.transitionWithView(self.view, duration: 1.12, options:
-            UIViewAnimationOptions.TransitionFlipFromLeft |
-                UIViewAnimationOptions.Autoreverse ,
+        UIView.transitionWithView(self.view, duration: 1.12,
+            options: [.TransitionFlipFromLeft, .Autoreverse],
+
+//            options:
+//            UIViewAnimationOptions.TransitionFlipFromLeft |
+//                UIViewAnimationOptions.Autoreverse ,
             animations: {
                 self.frontOfCardView!.hidden = false
                 self.backOfCardView!.hidden = true

@@ -108,11 +108,13 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         
-        flipCardToFrontShrink()
+        flipCardToRevealFront()
+//        flipCardToFront()
+//        flipCardToFrontShrink()
 
     }
     
-    //       flipCardToFront()
+    //
 
     
 
@@ -138,8 +140,11 @@ class ViewController: UIViewController {
 
 //        UIViewAnimationOptions.TransitionFlipFromLeft |
 
-        UIView.transitionWithView(self.view, duration: 1.12, options:
-                UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat | UIViewAnimationOptions.TransitionFlipFromLeft ,
+        UIView.transitionWithView(self.view, duration: 1.12,
+            options:[.Autoreverse,.Repeat,.TransitionFlipFromLeft],
+
+//            options:
+//                UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat | UIViewAnimationOptions.TransitionFlipFromLeft ,
             
             animations: {
                 self.frontOfCardView!.hidden = false
@@ -169,8 +174,10 @@ class ViewController: UIViewController {
         let moveShrinkSpinTransform = CATransform3DConcat(moveShrinkTransform,rotateTransform)
         let shrinkSpinTransform = CATransform3DConcat(scaleTransform,rotateTransform)
         
-        UIView.transitionWithView(self.view, duration: 1.12, options:
-            UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat | UIViewAnimationOptions.TransitionFlipFromLeft ,
+        UIView.transitionWithView(self.view, duration: 1.12,
+            options:[.Autoreverse,.Repeat,.TransitionCrossDissolve],
+            
+//            UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat | UIViewAnimationOptions.TransitionFlipFromLeft ,
             
             animations: {
                 self.frontOfCardView!.hidden = false
@@ -179,7 +186,11 @@ class ViewController: UIViewController {
                 //                self.backOfCardView!.transform =  move
                 //                self.frontOfCardView!.transform =  shrink
             },
-            completion: { (value: Bool) in
+            completion: {
+                (value: Bool) in
+                if value {
+                }
+                
                 self.frontOfCardView!.hidden = true
                 self.backOfCardView!.hidden = false
                 self.view.transform =  CGAffineTransformIdentity
@@ -194,16 +205,23 @@ class ViewController: UIViewController {
 
     func flipCardToFront () {
         
-        UIView.transitionWithView(self.view, duration: 1.12, options:
-            UIViewAnimationOptions.TransitionFlipFromLeft |
-                UIViewAnimationOptions.Autoreverse ,
+        UIView.transitionWithView(self.view, duration: 1.12,
+            options:[.Autoreverse,.Repeat,.TransitionCrossDissolve],
+
+//            options:
+//            UIViewAnimationOptions.TransitionFlipFromLeft |
+//                UIViewAnimationOptions.Autoreverse ,
+            
             animations: {
                 self.frontOfCardView!.hidden = false
                 self.backOfCardView!.hidden = true
             },
-            completion: {(fini: Bool) in
-                self.frontOfCardView!.hidden = true
-                self.backOfCardView!.hidden = false
+            completion: {
+                
+                (fini: Bool) in
+                if fini {
+                    
+                }
         })
     }
 
